@@ -152,7 +152,7 @@
         </div>
       </div>
     </nav>
-    <!-- nav end -->
+<!-- nav end -->
 
 
     <div class="search-panel d-none" id="searchPanel">
@@ -176,82 +176,163 @@
         </form>
       </div>
     </div>
-    <section class="parallax-holder text-center text-white text-center">
-      <div class="container position-relative">
+    <!-- Hero Section-->
+    <section class="py-5 bg-light">
+      <div class="container py-4">
         <div class="row">
-          <div class="col-xl-8 col-lg-10 mx-auto mx-auto">
-            <h1 class="text-shadow">Men's Streetwear</h1>
-            <p class="lead text-shadow mb-4">Streetwear fashion often has a unique design according to the brand, while fashion wearers will tend to choose the style they like.</p>
-            <p> <a class="btn btn-light" href="mens.html"> 
-                <svg class="svg-icon me-2 svg-icon-heavy svg-icon-sm">
-                  <use xlink:href="#shopping-bag-1"> </use>
-                </svg>See this offer</a></p>
+          <div class="col-lg-9 order-2 order-lg-1">
+            <h1>Checkout</h1><p class="lead">You currently have 3 item(s) in your basket</p>
+          </div>
+          <div class="col-lg-3 text-end order-1 order-lg-2">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb py-4 justify-content-lg-end mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Checkout</li>
+              </ol>
+            </nav>
           </div>
         </div>
       </div>
-      <div class="parallax h-100" data-parallax-image="./assets/images/parallax-1.jpg"></div>
     </section>
-    <section class="parallax-holder text-center text-white text-center">
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-xl-8 col-lg-10 mx-auto mx-auto">
-            <h1 class="text-shadow">Nike Air</h1>
-            <p class="lead text-shadow mb-4">It’s only crazy until you do it</p>
-            <p> <a class="btn btn-light" href="womens.html"> 
-                <svg class="svg-icon me-2 svg-icon-heavy svg-icon-sm">
-                  <use xlink:href="#shopping-bag-1"> </use>
-                </svg>See this offer</a></p>
+    <!-- Checkout Forms-->
+    <section class="py-5">
+      <div class="container py-5">
+        <div class="row gy-5 gx-5">
+          <div class="col-lg-8">
+            <ul class="nav nav-pills rounded-lg-pill flex-column flex-lg-row nav-fill pills-lg-rounded list-separated-lg-secondary mb-5">
+              <li class="nav-item my-1 my-lg-0"><a class="nav-link py-3 small text-uppercase active" href="checkout1.html">Address</a></li>
+              <li class="nav-item my-1 my-lg-0"><a class="nav-link py-3 small text-uppercase disabled" href="#">Delivery Method </a></li>
+              <li class="nav-item my-1 my-lg-0"><a class="nav-link py-3 small text-uppercase disabled" href="#">Payment Method </a></li>
+              <li class="nav-item my-1 my-lg-0"><a class="nav-link py-3 small text-uppercase disabled" href="#">Order Review</a></li>
+            </ul>
+            <div id="address">
+              <form action="#">
+                <!-- Invoice Address-->
+                <div class="bg-light rounded-pill px-4 py-3">
+                  <h6 class="mb-0">Invoice address                    </h6>
+                </div>
+                <div class="row gy-3 py-5">
+                  <div class="col-md-6">
+                    <label class="form-label" for="firstname">First Name</label>
+                    <input class="form-control" id="firstname" type="text" name="first-name" placeholder="Enter you first name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lastname">Last Name</label>
+                    <input class="form-control" id="lastname" type="text" name="last-name" placeholder="Enter your last name">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input class="form-control" id="email" type="email" name="email" placeholder="enter your email address">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="street">Street</label>
+                    <input class="form-control" id="street" type="text" name="address" placeholder="Your street name">
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label" for="city">City</label>
+                    <input class="form-control" id="city" type="text" name="city" placeholder="Your city">
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label" for="zip">ZIP</label>
+                    <input class="form-control" id="zip" type="text" name="zip" placeholder="ZIP code">
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label" for="state">State</label>
+                    <input class="form-control" id="state" type="text" name="state" placeholder="Your state">
+                  </div>
+                  <div class="col-md-3">
+                    <label class="form-label" for="country">Country</label>
+                    <input class="form-control" id="country" type="text" name="country" placeholder="Your country">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone-number">Phone Number</label>
+                    <input class="form-control" id="phone-number" type="tel" name="phone-number" placeholder="Your phone number">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="company">Company</label>
+                    <input class="form-control" id="company" type="text" name="company" placeholder="Your company name">
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" id="another-address" type="checkbox" onclick="toggleAddress()">
+                      <label class="form-check-label" for="another-address" data-bs-toggle="collapse" href="#shippingAddress" role="button" aria-expanded="false" aria-controls="shippingAddress">Use different shipping address</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Invoice Address-->
+                <!-- Shippping Address-->
+                <div class="collapse" id="shippingAddress">
+                  <div class="bg-light rounded-pill px-4 py-3">
+                    <h6 class="mb-0">Shipping address</h6>
+                  </div>
+                  <div class="row gy-3 py-5">
+                    <form action="">
+                    <div class="col-md-6">
+                      <label class="form-label" for="shipping_firstname">First Name</label>
+                      <input class="form-control" id="shipping_firstname" type="text" name="shipping_first-name" placeholder="Enter you first name">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="shipping_lastname">Last Name</label>
+                      <input class="form-control" id="shipping_lastname" type="text" name="shipping_last-name" placeholder="Enter your last name">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="shipping_email">Email Address</label>
+                      <input class="form-control" id="shipping_email" type="email" name="shipping_email" placeholder="enter your email address">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="shipping_street">Street</label>
+                      <input class="form-control" id="shipping_street" type="text" name="shipping_address" placeholder="Your street name">
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label" for="shipping_city">City</label>
+                      <input class="form-control" id="shipping_city" type="text" name="shipping_city" placeholder="Your city">
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label" for="shipping_zip">ZIP</label>
+                      <input class="form-control" id="shipping_zip" type="text" name="shipping_zip" placeholder="ZIP code">
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label" for="shipping_state">State</label>
+                      <input class="form-control" id="shipping_state" type="text" name="shipping_state" placeholder="Your state">
+                    </div>
+                    <div class="col-md-3">
+                      <label class="form-label" for="shipping_country">Country</label>
+                      <input class="form-control" id="shipping_country" type="text" name="shipping_country" placeholder="Your country">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="shipping_phone-number">Phone Number</label>
+                      <input class="form-control" id="shipping_phone-number" type="number" name="shipping_phone-number" placeholder="Your phone number">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="shipping_company">Company</label>
+                      <input class="form-control" id="shipping_company" type="text" name="shipping_company" placeholder="Your company name">
+                    </div>
+                  </div>
+                </form>
+                </div>
+                <!-- /Shipping Address-->
+                <div class="d-flex justify-content-between flex-column flex-lg-row"><a class="btn btn-outline-secondary px-sm-5 my-1" href="cart.html"> <i class="fas fa-angle-left me-2"></i>Back to basket</a><a class="btn btn-primary px-sm-5 my-1" href="checkout2.html">Choose delivery method<i class="fas fa-angle-right ms-2"></i></a></div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card rounded-0">
+              <div class="card-body px-4 py-5">
+                <h6 class="text-uppercase">Order Summary</h6>
+                <p class="fw-normal text-muted">Shipping and additional costs are calculated based on values you have entered</p>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between py-3 border-bottom"><span>Order Subtotal </span><strong class="fw-normal">₱3,189.00</strong></li>
+                  <li class="d-flex justify-content-between py-3 border-bottom"><span>Shipping and handling</span><strong class="fw-normal">₱380.00</strong></li>
+                  <li class="d-flex justify-content-between py-3 border-bottom"><span>Tax</span><strong class="fw-normal">$0.00</strong></li>
+                  <li class="d-flex justify-content-between py-3 border-bottom"><span>Total</span><strong class="text-primary h5 mb-0">₱3,369.00</strong></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="parallax h-100" data-parallax-image="./assets/images/parallax-2.jpg"></div>
     </section>
-    <section class="parallax-holder text-center text-white text-center">
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-xl-8 col-lg-10 mx-auto mx-auto">
-            <h1 class="text-shadow">Teenswear</h1>
-            <p class="lead text-shadow mb-4">Theming The theme is the subject on which any new construction idea, new style generation, any product is designed.</p>
-            <p> <a class="btn btn-dark" href="kids.html"> 
-                <svg class="svg-icon me-2 svg-icon-heavy svg-icon-sm">
-                  <use xlink:href="#shopping-bag-1"> </use>
-                </svg>See this offer</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="parallax h-100" data-parallax-image="./assets/images/parallax-3.jpg"></div>
-    </section>
-    <section class="parallax-holder text-center text-white text-center">
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-xl-8 col-lg-10 mx-auto mx-auto">
-            <h1 class="text-shadow">LIfestyle collection</h1>
-            <p class="lead text-shadow mb-4">Wear better, look better. Be Stylish, be our customer. Get dolled up, Be Fashionable; Delicate clothes for delicate you. Wear and set trends.</p>
-            <p> <a class="btn btn-light" href="category.html"> 
-                <svg class="svg-icon me-2 svg-icon-heavy svg-icon-sm">
-                  <use xlink:href="#shopping-bag-1"> </use>
-                </svg>See this offer</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="parallax h-100" data-parallax-image="./assets/images/parallax-4.jpg"></div>
-    </section>
-    <section class="parallax-holder text-center text-white text-center">
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-xl-8 col-lg-10 mx-auto mx-auto">
-            <h1 class="text-shadow">Three stripes</h1>
-            <p class="lead text-shadow mb-4">He must have tried it a hundred times, shut his eyes so that he wouldn't have to look at the floundering legs, and only stopped when he began to feel a mild, dull pain there that he had never felt before.</p>
-            <p> <a class="btn btn-light" href="category.html"> 
-                <svg class="svg-icon me-2 svg-icon-heavy svg-icon-sm">
-                  <use xlink:href="#shopping-bag-1"> </use>
-                </svg>See this offer</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="parallax h-100" data-parallax-image="./assets/images/parallax-5.jpg"></div>
-    </section>
-    <div id="scrollTop"><i class="fas fa-long-arrow-alt-up"></i></div>
+    <!-- Footer-->
     <!-- Footer-->
     <footer class="footer" style="background: #111111">
       <div class="py-5 text-white" style="background: #171717">
@@ -285,7 +366,7 @@
                   <use xlink:href="#helpline-24h-1"> </use>
                 </svg>
                 <div class="ms-3">
-                  <h6 class="text-uppercase mb-0">+63-991-488-1798</h6>
+                  <h6 class="text-uppercase mb-0">+63-961-488-1798</h6>
                   <p class="text-muted text-sm mb-0">24/7 Available Support</p>
                 </div>
               </div>
@@ -345,7 +426,7 @@
         <div class="container py-3">
           <div class="row align-items-center gy-3">
             <div class="col-md-6">
-              <p class="mb-0 text-sm fw-normal">&copy; 2023 <a href="index.html">CLOTHES STUDIO</a> All rights reserved.</p>
+              <p class="mb-0 text-sm fw-normal">&copy; 2023 <a class="reset-anchor" href="https://bootstrapious.com" target="_blank">CLOTHES STUDIO</a> All rights reserved.</p>
             </div>
             <div class="col-md-6">
               <ul class="list-inline text-lg-end mb-0">
@@ -389,34 +470,6 @@
     <script src="https://d19m59y37dris4.cloudfront.net/hub/2-0/js/theme.f03cfc8d.js"></script>
     <script src="https://d19m59y37dris4.cloudfront.net/hub/2-0/js/js-cookie.55cdbe0d.js"> </script>
     <script src="https://d19m59y37dris4.cloudfront.net/hub/2-0/js/demo.9f3f24e8.js"> </script>
-    <script>
-      document.addEventListener("scroll", handleScroll);
-      // get a reference to our predefined button
-      var scrollToTopBtn = document.querySelector("#scrollTop");
-      
-      function handleScroll() {
-        var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var GOLDEN_RATIO = 0.5;
-      
-        if ((document.documentElement.scrollTop / scrollableHeight ) > GOLDEN_RATIO) {
-          //show button
-          scrollToTopBtn.style.display = "block";
-        } else {
-          //hide button
-          scrollToTopBtn.style.display = "none";
-        }
-      }
-      
-      scrollToTopBtn.addEventListener("click", scrollToTop);
-      
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-      }
-      
-    </script>
     <script>
       // ------------------------------------------------------- //
       //   Inject SVG Sprite - 
